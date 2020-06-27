@@ -12,8 +12,8 @@ const main = () => {
       subject: ${subject}, 
       body: ${body}
     `)
-    const subjectText = subject.replace(/ /g, "%20")
-    const bodyText = body.replace(/ /g, "%20").replace(/\n/g, "%0A")
+    const subjectText = encodeURI(subject) //.replace(/ /g, "%20")
+    const bodyText = encodeURI(body) //.replace(/ /g, "%20").replace(/\n/g, "%0A")
     let bccText = ''
     console.log(`bcc: ${bcc}`)
     if (bcc.length > 0) {
