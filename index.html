@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Link Generator</title>
+    <script type="text/javascript" src="./main.js"></script>
+</head>
+<body>
+  <label for="mailto">Mailto:</label><br>
+  <input type="text" id="mailto" name="bcc" value="test@test.com"><br>
+  <label for="bcc">bcc:</label><br>
+  <input type="text" id="bcc" name="bcc" value="hiddentest@test.com"><br>
+  <label for="subject">subject:</label><br>
+  <input type="text" id="subject" name="subject" value="An Email Subject"><br>
+  <label for="body">body:</label><br>
+  <textarea id="body" name="body" rows="15" cols="80">body here</textarea><br>
+  <button type="button" id='generate'>generate link!</button> 
+  <label for="output">output:</label><br>
+  <textarea id="output" name="output" rows="15" cols="80">output goes here</textarea><br>
+</body>
+</html>
