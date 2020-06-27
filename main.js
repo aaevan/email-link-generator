@@ -14,7 +14,12 @@ const main = () => {
     `)
     const subjectText = subject.replace(/ /g, "%20")
     const bodyText = body.replace(/ /g, "%20").replace(/\n/g, "%0A")
-    const output_text = `mailto:${mailto}?bcc=${bcc}&subject=${subjectText}&body=${bodyText}`
+    let bccText = ''
+    console.log(`bcc: ${bcc}`)
+    if (bcc.length > 0) {
+      bccText = `?bcc=${bcc}`
+    }
+    const output_text = `mailto:${mailto}${bccText}&subject=${subjectText}&body=${bodyText}`
     const outputId = document.querySelector("#output")
     outputId.value = output_text
   })
