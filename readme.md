@@ -1,5 +1,7 @@
 # email-link-generator
 
+https://aaevan.github.io/email-link-generator/
+
 A simple html and javascript page to generate "mailto" format links.
 
 Useful for getting people to bother their elected officials in a very convenient format.
