@@ -12,7 +12,9 @@ const main = () => {
       subject: ${subject}, 
       body: ${body}
     `)
-    const output_text = `mailto:${mailto}?bcc=${bcc}&subject=${subject.replace(/ /g, "%20")}&body=${body.replace(/ /g, "%20")}`
+    const subjectText = subject.replace(/ /g, "%20")
+    const bodyText = body.replace(/ /g, "%20").replace(/\n/g, "%0A")
+    const output_text = `mailto:${mailto}?bcc=${bcc}&subject=${subjectText}&body=${bodyText}`
     const outputId = document.querySelector("#output")
     outputId.value = output_text
   })
@@ -21,5 +23,3 @@ const main = () => {
 window.onload = () => {
   main();
 };
-
-//`mailto:${mailto}?bcc=${bcc}&subject=${subject.replace(/ /g, "%20")}&body=${body.replace(/ /g, "%20")}`
