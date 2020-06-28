@@ -17,9 +17,9 @@ const main = () => {
     let bccText = ''
     console.log(`bcc: ${bcc}`)
     if (bcc.length > 0) {
-      bccText = `?bcc=${bcc}`
+      bccText = `&bcc=${bcc}`
     }
-    const output_text = `mailto:${mailto}${bccText}&subject=${subjectText}&body=${bodyText}`
+    const output_text = `mailto:${mailto}?${bccText}&subject=${subjectText}&body=${bodyText}`
     const outputId = document.querySelector("#output")
     outputId.value = output_text
   })
